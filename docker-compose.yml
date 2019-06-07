@@ -1,0 +1,17 @@
+version: '3.3'
+
+services:
+  web:
+    image: m4r14/flarum
+    ports:
+      - 80:80
+
+  database:
+    image: mysql:5.7
+    restart: always
+    environment:
+      TZ: Asia/Bangkok
+      MYSQL_DATABASE: flarum
+      MYSQL_USER: flarum
+      MYSQL_PASSWORD: pp6321
+      MYSQL_ROOT_PASSWORD: 123456
